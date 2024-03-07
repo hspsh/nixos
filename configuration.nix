@@ -16,6 +16,7 @@ in
       ./modules/base.nix
       # ./modules/wireguard.nix
       ./modules/packages.nix
+      ./modules/appimage.nix
       ./modules/design.nix
       ./modules/i18n.nix
       ./modules/graphics.nix
@@ -35,6 +36,9 @@ in
       ./modules/docker.nix
       ./modules/music.nix
       ./modules/printing.nix
+      ./modules/lib64-polyfill.nix
+      ./modules/notes.nix
+      ./modules/gcloud.nix
       
       <home-manager/nixos>
       ./home-manager/main.nix

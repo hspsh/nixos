@@ -39,15 +39,19 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86SplitScreen exec --no-startup-id xrandr --auto
+
 
 set $bright /sys/class/backlight/amdgpu_bl0/brightness
 bindsym XF86MonBrightnessUp exec echo $(expr $(cat $bright) \* 2) > $bright 
 bindsym XF86MonBrightnessDown exec echo $([ $(expr $(cat $bright ) / 2) -gt  1 ] && expr $(cat $bright) / 2 || 1) > $bright
 
-bindsym XF86Display exec --no-startup-id autorandr --change
+bindsym XF86Display exec --no-startup-id xrandr --auto
 
 # EMOJOS 🐋
 bindsym $mod+period exec --no-startup-id rofimoji
+
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -226,11 +230,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id dunst
 
-
 # My default gay apps
-exec --no-startup-id  google-chrome-stable --profile-directory="Default"                          # Home
-# exec --no-startup-id    intellij-idea-ultimate
-# exec --no-startup-id    webstorm
+exec --no-startup-id    google-chrome-stable --profile-directory="Default"                          # Home
 exec --no-startup-id    spotify
 exec --no-startup-id    slack
 exec --no-startup-id    blueman-manager
