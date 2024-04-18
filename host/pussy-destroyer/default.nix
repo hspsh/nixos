@@ -9,6 +9,7 @@
       ./jira-cli.nix
       ./sops.nix
       ./users.nix
+      ./kinguin-vpn.nix
       ./hardware-configuration.nix
 
       ../../modules/base.nix

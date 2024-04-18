@@ -27,8 +27,7 @@
       # <home-manager>
       ../../home-manager/main.nix
 
-      # ./utils/disable-lid-switch.nix
-      ../../utils/enable-lid-switch.nix
+      ../../utils/disable-lid-switch.nix
       ../../utils/adsblock.nix
       ../../utils/random-option.nix
       ../../utils/home-manager-commons.nix
