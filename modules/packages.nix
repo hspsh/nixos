@@ -114,8 +114,6 @@
 
     plantuml
     entr
-
-    hledger
   ];
 
   # xdg.mime.defaultApplications = with pkgs; [

@@ -29,6 +29,7 @@
       ../../modules/lib64-polyfill.nix
       ../../modules/notes.nix
       ../../modules/programming.nix
+      ../../modules/hledger.nix
 
       # <home-manager>
       ../../home-manager/main.nix
