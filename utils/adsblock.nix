@@ -10,5 +10,6 @@ in
         127.0.0.1 mongo-replica-set-0
         127.0.0.1 mongo-replica-set-1
         127.0.0.1 mongo-replica-set-2
+        # 192.168.88.14 docs.hsp.sh
     '';
 }

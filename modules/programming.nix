@@ -13,7 +13,8 @@ in
 
     ## Google devel Kit
     gdk
-
+    
+    yaml-language-server
 
     gitlab-runner
     sonar-scanner-cli

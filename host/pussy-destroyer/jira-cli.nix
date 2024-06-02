@@ -27,5 +27,7 @@ in
     ${alias "jira-done" ''jira issue move $1 done''}
     
     ${alias "mindoo" ''vim "/home/psuwala/mindoo/Mindoo/public/The Root.md"''}
+
+    ${alias "watch" ''peerflix --mpv "$1"''}
   '';
 }

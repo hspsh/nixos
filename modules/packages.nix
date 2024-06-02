@@ -111,9 +111,14 @@
     sops
 
     killall
+
+    plantuml
+    entr
+
+    hledger
   ];
 
-  # xdg.mimeApps.defaultApplications = with pkgs; [
+  # xdg.mime.defaultApplications = with pkgs; [
   #   gnome.eog
   # ];
 }
