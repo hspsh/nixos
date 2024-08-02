@@ -10,6 +10,7 @@ in
     ## Node
     nodejs
     nodePackages.npm
+    nodePackages.bash-language-server
 
     ## Google devel Kit
     gdk
@@ -18,6 +19,8 @@ in
 
     gitlab-runner
     sonar-scanner-cli
+
+    glab
   ];
 
   ## Docker

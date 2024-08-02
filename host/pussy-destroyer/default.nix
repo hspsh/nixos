@@ -30,6 +30,7 @@
       ../../modules/notes.nix
       ../../modules/programming.nix
       ../../modules/hledger.nix
+      ../../modules/node-red.nix
 
       # <home-manager>
       ../../home-manager/main.nix

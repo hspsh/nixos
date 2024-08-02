@@ -73,6 +73,13 @@
       xmltodict
 
       qrcode
+      requests
+
+      lxml
+      pillow
+      tkinter
+      pyusb
+      inkscape
     ]))
 
     openjdk21
@@ -114,9 +121,13 @@
 
     plantuml
     entr
+
+    borgbackup
+
+    ffmpeg
   ];
 
-  # xdg.mime.defaultApplications = with pkgs; [
-  #   gnome.eog
-  # ];
+  xdg.mime.defaultApplications = {
+    "image/png" = "eog.desktop";
+  };
 }
