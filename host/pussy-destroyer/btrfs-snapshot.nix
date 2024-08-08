@@ -1,7 +1,7 @@
 { ... }: {
     services.snapper = {
         snapshotInterval = "daily";
-        cleanupInterval = "1M";
+        cleanupInterval = "7D";
         configs."home" = {
             SUBVOLUME = "/partition-root/home";
             TIMELINE_CREATE = true;

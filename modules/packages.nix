@@ -10,6 +10,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+
     gnome.eog
     discord
 
@@ -30,7 +31,6 @@
 
     nixd
     nil
-    rnix-lsp
     nixpkgs-fmt
 
     jetbrains.idea-ultimate
@@ -125,6 +125,8 @@
     borgbackup
 
     ffmpeg
+
+    openssl
   ];
 
   xdg.mime.defaultApplications = {
