@@ -11,6 +11,7 @@ in
     nodejs
     nodePackages.npm
     nodePackages.bash-language-server
+    yarn
 
     ## Google devel Kit
     gdk

@@ -17,6 +17,7 @@
       ../../modules/packages.nix
       ../../modules/appimage.nix
       ../../modules/design.nix
+      ../../modules/music.nix
       ../../modules/i18n.nix
       ../../modules/graphics.nix
       ../../modules/bluetooth.nix

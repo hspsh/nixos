@@ -3,10 +3,10 @@
     {
       disko.url = "https://github.com/nix-community/disko/archive/master.tar.gz";
       sops-nix.url = "github:Mic92/sops-nix";
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+      nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       unpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       home-manager = {
-        url = "github:nix-community/home-manager/release-23.11";
+        url = "github:nix-community/home-manager/master";
       };
     };
   outputs = inputs@{ self, nixpkgs, unpkgs, home-manager, sops-nix, disko, ... }: {

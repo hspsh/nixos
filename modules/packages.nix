@@ -131,5 +131,7 @@
 
   xdg.mime.defaultApplications = {
     "image/png" = "eog.desktop";
+    "image/jpeg" = "eog.desktop";
+    "application/pdf" = "evince.desktop";
   };
 }

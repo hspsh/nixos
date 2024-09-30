@@ -42,7 +42,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86SplitScreen exec --no-startup-id xrandr --auto
 
 
-set $bright /sys/class/backlight/amdgpu_bl0/brightness
+set $bright /sys/class/backlight/amdgpu_bl1/brightness
 bindsym XF86MonBrightnessUp exec echo $(expr $(cat $bright) \* 2) > $bright 
 bindsym XF86MonBrightnessDown exec echo $([ $(expr $(cat $bright ) / 2) -gt  1 ] && expr $(cat $bright) / 2 || 1) > $bright
 
