@@ -22,6 +22,11 @@ in
     sonar-scanner-cli
 
     glab
+
+
+    jetbrains.idea-ultimate
+    jetbrains.webstorm
+    jetbrains.phpstorm
   ];
 
   ## Docker

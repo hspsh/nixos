@@ -33,9 +33,6 @@
     nil
     nixpkgs-fmt
 
-    jetbrains.idea-ultimate
-    jetbrains.webstorm
-
     slack
     telegram-desktop
 
@@ -59,6 +56,8 @@
 
     smartmontools
 
+    pandoc
+    texlive.combined.scheme-medium
 
     (python310.withPackages (pyton: with pyton;[
       mt-940

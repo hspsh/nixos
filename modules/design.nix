@@ -5,6 +5,8 @@
     pkgs.k40-whisperer
     pkgs.openscad
     unpkgs.legacyPackages.x86_64-linux.orca-slicer
+
+    pkgs.google-fonts
   ];
 
   fonts.packages = with pkgs; [
