@@ -1,4 +1,4 @@
-board: { pkgs, ... }@args: {
+{ pkgs, ... }: {
   # imports = [ (modulesPath + path) ];
 
   # boot.kernelPackages = pkgs.linuxPackages_rpi4;
@@ -12,7 +12,7 @@ board: { pkgs, ... }@args: {
   #   })
   # ];
 
-  raspberry-pi-nix.board = board;
+  raspberry-pi-nix.board = "bcm2712";
 
   services.openssh = {
     enable = true;

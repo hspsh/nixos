@@ -37,7 +37,7 @@
       system = "aarch64-linux";
       modules = [
         pi.nixosModules.raspberry-pi
-        import (./utils/pi.nix) "bcm2712"
+        (import ./utils/pi.nix)
         ./utils/hackerspace.nix
       ];
     };
@@ -45,7 +45,7 @@
       system = "aarch64-linux";
       modules = [
         pi.nixosModules.raspberry-pi
-        import (./utils/pi.nix) "bcm2711"
+        ((import ./utils/pi.nix) "bcm2711")
         ./utils/hackerspace.nix
       ];
     };

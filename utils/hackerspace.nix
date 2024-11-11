@@ -1,4 +1,4 @@
-board: { pkgs, ... }: {
+{ pkgs, ... }: {
   services.openssh = {
     enable = true;
     ports = [ 22 ];
