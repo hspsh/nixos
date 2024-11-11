@@ -8,7 +8,6 @@
   #  })).hledger-iadd
   ];
   home-manager-commons.programs.zsh.envExtra = ''
-    export JIRA_API_TOKEN="${builtins.readFile /run/secrets/jira/token}"
     export LEDGER_FILE="/home/psuwala/Documents/finance/2024.journal" 
   '';
 

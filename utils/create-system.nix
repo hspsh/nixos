@@ -1,4 +1,4 @@
-nixpkgs: system: extend: nixpkgs.lib.nixosSystem {
+nixpkgs: module: system: extend: nixpkgs.lib.nixosSystem {
         system = system;
         modules = [
           ({ pkgs, modulesPath, ... }@args: {
@@ -35,5 +35,6 @@ nixpkgs: system: extend: nixpkgs.lib.nixosSystem {
                 };
             };
           } // extend args )
+          module
         ];
       }

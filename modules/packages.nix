@@ -36,10 +36,7 @@
     gphotos-sync
 
     # LaTeX
-    pandoc
-    texlive.combined.scheme-medium
-    graphviz
-    plantuml
+
   ];
 
   xdg.mime.defaultApplications = {
