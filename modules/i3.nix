@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
-  home-manager.users.psuwala.home.file.".config/i3/config".text=''
-      ${builtins.readFile ./i3/config} 
-  '';
+  # home-manager.users.psuwala.home.file.".config/i3/config".text=''
+  #     ${builtins.readFile ./i3/config} 
+  # '';
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
