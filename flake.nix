@@ -47,6 +47,8 @@
         pi.nixosModules.raspberry-pi
         ((import ./utils/pi.nix) "bcm2711")
         ./utils/hackerspace.nix
+        ./modules/graphics.nix
+        ./modules/i3.nix
       ];
     };
   };

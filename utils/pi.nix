@@ -29,9 +29,9 @@
   systemd.services.sshd.wantedBy = pkgs.lib.mkForce [ "multi-user.target" ];
   users.users.root.password = "password1";
 
-  networking.wireless.networks = {
-    eduram = {
-      psk = "zarazcipodam";
-    };
-  };
+  # networking.wireless.networks = {
+  #   eduram = {
+  #     psk = "zarazcipodam";
+  #   };
+  # };
 } 

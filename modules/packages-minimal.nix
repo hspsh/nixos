@@ -12,5 +12,6 @@
     dmidecode
     usbutils
     entr
+    nmap
   ];
 }
