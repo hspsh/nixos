@@ -29,7 +29,6 @@
       ../../modules/system.nix
       ../../modules/printing.nix
       ../../modules/lib64-polyfill.nix
-      ../../modules/notes.nix
       ../../modules/programming.nix
       ../../modules/hledger.nix
       ../../modules/node-red.nix

@@ -6,6 +6,11 @@
     pkgs.openscad
     unpkgs.legacyPackages.x86_64-linux.orca-slicer
 
+    pkgs.pandoc
+    pkgs.texlive.combined.scheme-medium
+    pkgs.graphviz
+    pkgs.plantuml
+
     pkgs.google-fonts
   ];
 
@@ -24,6 +29,5 @@
     roboto
     roboto-mono
     roboto-serif
-
   ];
 }

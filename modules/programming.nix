@@ -5,6 +5,9 @@ let
   ]);
 in
 {
+  home-manager-commons.programs.zsh.envExtra = ''
+    export JIRA_API_TOKEN="${builtins.readFile /run/secrets/jira/token}"
+  '';
 
   environment.systemPackages = with pkgs; [
     ## Node
@@ -22,7 +25,6 @@ in
     sonar-scanner-cli
 
     glab
-
 
     jetbrains.idea-ultimate
     jetbrains.webstorm
