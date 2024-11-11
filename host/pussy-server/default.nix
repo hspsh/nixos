@@ -18,7 +18,7 @@
       ../../modules/google-sync.nix
       ../../modules/i3.nix
       ../../modules/office.nix
-      ../../modules/system.nix
+      ../../modules/networking.nix
       ../../modules/printing.nix
       ../../modules/lib64-polyfill.nix
       ../../modules/notes.nix

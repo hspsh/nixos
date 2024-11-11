@@ -5,13 +5,14 @@
       sops-nix.url = "github:Mic92/sops-nix";
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       unpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+      stable.url = "github:NixOS/nixpkgs/nixos-24.05";
       hardware.url = "github:NixOS/nixos-hardware/master";
       home-manager = {
         url = "github:nix-community/home-manager/master";
       };
       pi.url = "github:nix-community/raspberry-pi-nix";
     };
-  outputs = inputs@{ self, pi, nixpkgs, unpkgs, home-manager, sops-nix, disko, ... }: {
+  outputs = { pi, nixpkgs, unpkgs, stable, home-manager, sops-nix, disko, ... }: {
     nixosConfigurations.pussy-destroyer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit unpkgs; };
@@ -32,11 +33,20 @@
         disko.nixosModules.disko
       ];
     };
-    nixosConfigurations.rpi5 = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.rpi5 = stable.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
         pi.nixosModules.raspberry-pi
-        ./utils/pi5.nix
+        import (./utils/pi.nix) "bcm2712"
+        ./utils/hackerspace.nix
+      ];
+    };
+    nixosConfigurations.rpi3plus = stable.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        pi.nixosModules.raspberry-pi
+        import (./utils/pi.nix) "bcm2711"
+        ./utils/hackerspace.nix
       ];
     };
   };

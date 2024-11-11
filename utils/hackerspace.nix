@@ -1,19 +1,4 @@
-{ pkgs, ... }@args: {
-  # imports = [ (modulesPath + path) ];
-
-  # boot.kernelPackages = pkgs.linuxPackages_rpi4;
-  # boot.kernelPackages = rpi5.legacyPackages.aarch64-linux.linuxPackages_rpi5;
-
-  # could change package to zfs_2_2 but who cares for zfs lol
-  # nixpkgs.overlays = [
-  #   (final: super: {
-  #     makeModulesClosure = x:
-  #       super.makeModulesClosure (x // { allowMissing = true; });
-  #   })
-  # ];
-
-  raspberry-pi-nix.board = "bcm2712";
-
+board: { pkgs, ... }: {
   services.openssh = {
     enable = true;
     ports = [ 22 ];
@@ -29,9 +14,11 @@
   systemd.services.sshd.wantedBy = pkgs.lib.mkForce [ "multi-user.target" ];
   users.users.root.password = "password1";
 
+  users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGHX76mgcCWWeUFNogAFB4OY632sfBX/ylDG1bKuj/J psuwala@fedora.local" ];
+  
   networking.wireless.networks = {
     eduram = {
       psk = "zarazcipodam";
     };
   };
-} 
+}
