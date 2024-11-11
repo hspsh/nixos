@@ -9,8 +9,9 @@
       home-manager = {
         url = "github:nix-community/home-manager/master";
       };
+      pi.url = "github:nix-community/raspberry-pi-nix";
     };
-  outputs = inputs@{ self, hardware, nixpkgs, unpkgs, home-manager, sops-nix, disko, ... }: {
+  outputs = inputs@{ self, pi, nixpkgs, unpkgs, home-manager, sops-nix, disko, ... }: {
     nixosConfigurations.pussy-destroyer = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit unpkgs; };
@@ -31,18 +32,13 @@
         disko.nixosModules.disko
       ];
     };
-    nixosConfigurations.images =
-      let
-        create = import ./utils/create-system.nix;
-      in
-      {
-        rpi5Card = (create nixpkgs hardware.nixosModules.raspberry-pi-5 "aarch64-linux" ({ pkgs, modulesPath, ... }:
-          ({
-            imports = [ (modulesPath + "/installer/cd-dvd/sd-image-aarch64.nix") ];
-            # boot.kernelPackages = rpi5.legacyPackages.aarch64-linux.linuxPackages_rpi5;
-            boot.supportedFilesystems.zfs = nixpkgs.lib.mkForce false;
-          })
-        )).config.system.build.sdImage;
-      };
+    nixosConfigurations.rpi5 = nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      specialArgs = { inherit unpkgs; };
+      modules = [
+        pi.nixosModules.raspberry-pi
+        ./utils/pi5.nix
+      ];
+    };
   };
 }
