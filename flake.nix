@@ -34,7 +34,6 @@
     };
     nixosConfigurations.rpi5 = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
-      specialArgs = { inherit unpkgs; };
       modules = [
         pi.nixosModules.raspberry-pi
         ./utils/pi5.nix
