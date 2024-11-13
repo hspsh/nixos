@@ -40,7 +40,7 @@
         (import ./utils/pi5.nix)
         ./utils/hackerspace.nix
         ./modules/graphics.nix
-        ./modules/i3.nix
+        # ./modules/i3.nix
       ];
     };
     nixosConfigurations.rpi4 = stable.lib.nixosSystem {
