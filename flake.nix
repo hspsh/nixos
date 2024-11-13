@@ -46,10 +46,7 @@
     nixosConfigurations.rpi4 = stable.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
-        ({ pkgs, modulesPath, ... }: {
-          imports = [ (modulesPath + "/installer/cd-dvd/sd-image-aarch64.nix") ];
-          boot.kernelPackages = pkgs.linuxPackages_rpi4;
-        })
+        ./utils/pi.nix
         ./utils/hackerspace.nix
       ];
     };

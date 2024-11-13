@@ -1,14 +1,12 @@
-{ pkgs, ... }: {
-  # imports = [ (modulesPath + path) ];
-
+{ pkgs, lib, modulesPath, ... }: {
+  imports = [ (modulesPath + "/installer/sd-card/sd-image-aarch64.nix") ];
   boot.kernelPackages = pkgs.linuxPackages_rpi4;
-  # boot.kernelPackages = rpi5.legacyPackages.aarch64-linux.linuxPackages_rpi5;
+  boot.supportedFilesystems.zfs = lib.mkForce false;
 
-  # could change package to zfs_2_2 but who cares for zfs lol
-  # nixpkgs.overlays = [
-  #   (final: super: {
-  #     makeModulesClosure = x:
-  #       super.makeModulesClosure (x // { allowMissing = true; });
-  #   })
-  # ];
+  nixpkgs.overlays = [
+    (final: super: {
+      makeModulesClosure = x:
+        super.makeModulesClosure (x // { allowMissing = true; });
+    })
+  ];
 } 
