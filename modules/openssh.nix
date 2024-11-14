@@ -4,4 +4,5 @@
     enable = true;
     settings.PasswordAuthentication = false;
   };
+  programs.ssh.startAgent = true;
 }
