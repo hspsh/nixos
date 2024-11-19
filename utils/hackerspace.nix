@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   services.openssh = {
     enable = true;
     ports = [ 22 ];
@@ -22,6 +22,8 @@
   users.users.root.password = "pusia1";
   users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGHX76mgcCWWeUFNogAFB4OY632sfBX/ylDG1bKuj/J psuwala@fedora.local" ];
   
+  networking.networkmanager.enable = lib.mkForce false; 
+  networking.wireless.enable = true;
   networking.wireless.networks = {
     eduram = {
       psk = "zarazcipodam";
