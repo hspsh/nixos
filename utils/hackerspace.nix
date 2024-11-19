@@ -12,8 +12,13 @@
   };
   environment.systemPackages = [ pkgs.neovim ];
   systemd.services.sshd.wantedBy = pkgs.lib.mkForce [ "multi-user.target" ];
-  users.users.root.password = "pusia1";
+    
+  users.users.hsp = {
+    password = "pusia1";
+    extraGroups = [ "wheel" ];
+  };
 
+  users.users.root.password = "pusia1";
   users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGHX76mgcCWWeUFNogAFB4OY632sfBX/ylDG1bKuj/J psuwala@fedora.local" ];
   
   networking.wireless.networks = {
