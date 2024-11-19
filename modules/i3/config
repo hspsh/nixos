@@ -183,7 +183,7 @@ bindcode $mod+Shift+82   move container to workspace number $ws15
 bindcode $mod+Shift+86   move container to workspace number $ws16
 bindcode $mod+Shift+104  move container to workspace number $ws17
 
-bindcode $mod+79 exec curl 'http://banana.at.hsp.net.pl:8000/print/32' --data-raw 'contact_1=%2B48662117872&contact_2=Yayamato&name=Piotr+Suwala&print=Print'
+bindcode $mod+79 exec curl 'http://labello.hack/api/templates/20/print' -H 'Content-Type: application/json' --data-raw '{"fields":{"name":"Piotr Suwała","number":"662 117 872","nick":"mayo","type":"xoxoxoxo"}}'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

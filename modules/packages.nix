@@ -30,13 +30,11 @@
     borgbackup
     ffmpeg
     sops
+    htop
 
     # google
     google-drive-ocamlfuse
     gphotos-sync
-
-    # LaTeX
-
   ];
 
   xdg.mime.defaultApplications = {
