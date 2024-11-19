@@ -15,6 +15,7 @@
     
   users.users.hsp = {
     password = "pusia1";
+    isNormalUser = true;
     extraGroups = [ "wheel" ];
   };
 
