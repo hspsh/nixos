@@ -39,7 +39,7 @@
         pi.nixosModules.raspberry-pi
         (import ./utils/pi5.nix)
         ./utils/hackerspace.nix
-        ./modules/graphics.nix
+        # ./modules/graphics.nix
         # ./modules/i3.nix
       ];
     };
