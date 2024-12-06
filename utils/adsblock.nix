@@ -11,5 +11,15 @@ in
         127.0.0.1 mongo-replica-set-1
         127.0.0.1 mongo-replica-set-2
         # 192.168.88.14 docs.hsp.sh
+        # 192.168.88.94 ledger.hsp.sh
+        
+        # 185.91.127.202 pterodactyl.app
+        # 185.91.127.202 wings.server
+
+        127.0.0.1 pterodactyl.app
+        127.0.0.1 wings.server
+        
+        10.98.246.56 gitlab.kinguin.info
+
     '';
 }

@@ -13,6 +13,7 @@
       ./hardware-configuration.nix
 
       ../../modules/base.nix
+      ../../modules/gc.nix
       ../../modules/direnv.nix
       ../../modules/packages.nix
       ../../modules/appimage.nix
