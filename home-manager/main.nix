@@ -23,6 +23,14 @@ let
 
 
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
+    programs.git = {
+        enable = true;
+        userEmail = "psuwala@ksidelta.com";
+        userName = "psuwala";
+        extraConfig = {
+            core.editor = "nvim";
+        };
+    };
 
     programs.emacs = {
       enable = true;

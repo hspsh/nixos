@@ -23,14 +23,12 @@
         disko.nixosModules.disko
       ];
     };
-    nixosConfigurations.pussy-server = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.cheap-pussy = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit unpkgs; };
       modules = [
-        ./host/pussy-server
-        sops-nix.nixosModules.sops
+        ./host/cheap-pussy
         home-manager.nixosModules.home-manager
-        disko.nixosModules.disko
       ];
     };
     nixosConfigurations.rpi5 = stable.lib.nixosSystem {
