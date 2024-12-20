@@ -7,7 +7,7 @@
     unpkgs.legacyPackages.x86_64-linux.orca-slicer
 
     pkgs.pandoc
-    pkgs.texlive.combined.scheme-medium
+    pkgs.texlive.combined.scheme-full
     pkgs.graphviz
     pkgs.plantuml
 
