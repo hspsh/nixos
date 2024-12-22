@@ -231,7 +231,7 @@ exec --no-startup-id volumeicon
 exec --no-startup-id dunst
 
 # My default gay apps
-exec --no-startup-id    google-chrome-stable --profile-directory="Default"                          # Home
+exec --no-startup-id    google-chrome-stable                          # Home
 exec --no-startup-id    spotify
 exec --no-startup-id    slack
 exec --no-startup-id    blueman-manager

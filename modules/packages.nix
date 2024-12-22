@@ -25,6 +25,7 @@
     drawio
     obs-studio
     taskwarrior
+    evince
 
     # cli utils
     borgbackup
