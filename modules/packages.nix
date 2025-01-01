@@ -12,6 +12,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    lua
+
     # user utils
     gnome.eog
     nodePackages.peerflix
@@ -38,9 +40,10 @@
     gphotos-sync
   ];
 
+  xdg.mime.enable = true;
   xdg.mime.defaultApplications = {
-    "image/png" = "eog.desktop";
-    "image/jpeg" = "eog.desktop";
-    "application/pdf" = "evince.desktop";
+    "image/png" = "org.gnome.eog.desktop";
+    "image/jpeg" = "org.gnome.eog.desktop";
+    "application/pdf" = "org.gnome.Evince.desktop";
   };
 }

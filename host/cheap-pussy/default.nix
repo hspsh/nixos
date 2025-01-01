@@ -37,6 +37,9 @@
       ../../utils/adsblock.nix
       ../../utils/random-option.nix
       ../../utils/home-manager-commons.nix
+
+      (import ../../modules/one-command-update.nix { path = /home/psuwala/nixos; host="cheap-pussy"; })
+      
     ];
 
     services.gnome.core-utilities.enable = false;

@@ -1,7 +1,7 @@
 let
   hosts = "${builtins.fetchurl  {
     url = "https://someonewhocares.org/hosts/hosts";
-    sha256 = "0bx3kwkx45migacgasfbrlmxvswgrkyz2hrsay5n0m8n3qqfmyq7";
+    sha256 = "1jnn756z0nacmvdpwngy1s0zz9hyyfrajgwa8a9m4jg9fpf8yax8";
   }}";
 in
 { ... }: {

@@ -4,10 +4,10 @@ set ignorecase              " case insensitive
 set mouse=v                 " middle-click paste with 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
-set tabstop=4               " number of columns occupied by a tab 
-set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set tabstop=2               " number of columns occupied by a tab 
+set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
-set shiftwidth=4            " width for autoindents
+set shiftwidth=2            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
@@ -123,26 +123,27 @@ require'lspconfig'.yamlls.setup {
         }
 }
 
--- require"obsidian".setup{
---   dir = "~/mindoo",
---   disable_frontmatter = true,
---   completion = {
---     nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
---   }
--- }
--- 
--- vim.keymap.set(
---   "n",
---   "gf",
---   function()
---     if require('obsidian').util.cursor_on_markdown_link() then
---       return "<cmd>ObsidianFollowLink<CR>"
---     else
---       return "gf"
---     end
---   end,
---   { noremap = false, expr = true}
--- )
+
+require"obsidian".setup{
+  dir = "~/mindoo",
+  disable_frontmatter = true,
+  completion = {
+    nvim_cmp = true, -- if using nvim-cmp, otherwise set to false
+  }
+}
+
+vim.keymap.set(
+  "n",
+  "gf",
+  function()
+    if require('obsidian').util.cursor_on_markdown_link() then
+      return "<cmd>ObsidianFollowLink<CR>"
+    else
+      return "gf"
+    end
+  end,
+  { noremap = false, expr = true}
+)
 
 
 EOF

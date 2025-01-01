@@ -49,7 +49,7 @@ let
         share = true;
       };
       shellAliases = {
-        update = "sudo nixos-rebuild switch --impure";
+        # update = "sudo nixos-rebuild switch --impure";
         pbcopy = "xclip -i -selection clipboard";
         pbbpaste = "xclip -o -selection clipboard";
       };
@@ -93,7 +93,7 @@ let
         tabular
         vim-markdown
 
-        # obsidian-nvim
+        obsidian-nvim
 
         fzf-lua
 

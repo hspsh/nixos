@@ -1,8 +1,11 @@
-{ path, name }:{
-  configureHome = {
+{ path, host }:{
+  # imports = [
+  #   ../utils/home-manager-commons.nix
+  # ];
+  home-manager-commons = {
      programs.zsh = {
       shellAliases = {
-        update = "sudo nixos-rebuild switch --impure";
+        update = "sudo nixos-rebuild switch --flake ${path}#${host}";
         };
     };
 };
