@@ -20,6 +20,11 @@ filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 
+
+lua << EOF
+vim.opt_local.conceallevel = 2
+EOF
+
 " set g:plantuml_previewer#plantuml_jar_path=/usr/bin/plantuml
 let g:lsc_server_commands = {'java': ''}
 

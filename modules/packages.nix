@@ -38,6 +38,8 @@
     # google
     google-drive-ocamlfuse
     gphotos-sync
+
+    xorg.xkill
   ];
 
   xdg.mime.enable = true;

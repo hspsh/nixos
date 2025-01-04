@@ -38,7 +38,7 @@
       ../../utils/random-option.nix
       ../../utils/home-manager-commons.nix
 
-      (import ../../modules/one-command-update.nix { path = /home/psuwala/nixos; host="cheap-pussy"; })
+      (import ../../modules/one-command-update.nix { path = "/home/psuwala/nixos"; host="cheap-pussy"; })
       
     ];
 
