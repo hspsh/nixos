@@ -5,7 +5,7 @@
   home-manager-commons = {
      programs.zsh = {
       shellAliases = {
-        update = "sudo nixos-rebuild switch --flake ${path}#${host}";
+        update = "sudo nixos-rebuild switch --flake ${path}#${host} --impure";
         };
     };
 };

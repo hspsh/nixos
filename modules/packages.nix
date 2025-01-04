@@ -40,6 +40,8 @@
     gphotos-sync
 
     xorg.xkill
+
+    age
   ];
 
   xdg.mime.enable = true;
