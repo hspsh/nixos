@@ -28,6 +28,7 @@
       ../../modules/programming.nix
       ../../modules/hledger.nix
       ../../modules/node-red.nix
+      ../../modules/environment.nix
 
       # <home-manager>
       ../../home-manager/main.nix

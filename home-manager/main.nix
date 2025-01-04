@@ -8,7 +8,6 @@ let
     #!${pkgs.stdenv.shell}
     ${body}
   '';
-  decrypt = import ../utils/age-decrypt.nix pkgs ~/.ssh/id_ed25519;
   configureHome = {
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "23.11";
@@ -84,8 +83,6 @@ let
       };
       initExtra = ''
         ${alias "cropToFullHd" "convert -crop 1920x1080+0+60 $1 $1.crop"}
-
-        ${decrypt ./envs.sh}
       '';
       
     };
