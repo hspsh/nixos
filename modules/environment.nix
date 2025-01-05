@@ -4,4 +4,7 @@ let
 in
 {
   environment.extraInit = decrypt ./envs.sh;
+  environment.variables = {
+    TEST = "testt";
+  };
 }

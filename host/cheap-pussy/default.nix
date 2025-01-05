@@ -29,6 +29,7 @@
       ../../modules/hledger.nix
       ../../modules/node-red.nix
       ../../modules/environment.nix
+      ../../modules/ssh.nix
 
       # <home-manager>
       ../../home-manager/main.nix
