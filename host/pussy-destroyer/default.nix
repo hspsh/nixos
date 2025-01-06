@@ -22,7 +22,7 @@
       ../../modules/i18n.nix
       ../../modules/graphics.nix
       ../../modules/bluetooth.nix
-      ../../modules/openssh.nix
+      ../../modules/ssh.nix
       ../../modules/games.nix
       ../../modules/google-sync.nix
       ../../modules/i3.nix

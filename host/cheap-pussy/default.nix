@@ -17,7 +17,6 @@
       ../../modules/i18n.nix
       ../../modules/graphics.nix
       ../../modules/bluetooth.nix
-      ../../modules/openssh.nix
       ../../modules/games.nix
       ../../modules/google-sync.nix
       ../../modules/i3.nix
@@ -30,6 +29,7 @@
       ../../modules/node-red.nix
       ../../modules/environment.nix
       ../../modules/ssh.nix
+      ../../modules/borg.nix
 
       # <home-manager>
       ../../home-manager/main.nix

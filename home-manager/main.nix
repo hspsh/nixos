@@ -11,7 +11,13 @@ let
   configureHome = {
     /* The home.stateVersion option does not have a default and must be set */
     home.stateVersion = "23.11";
-
+    # programs.
+    # programs.ssh.matchBlocks = {
+    #   artur = {
+    #     hostname = "artur.at.hsp.sh";
+    #     forwardAgent = true;
+    #   };
+    # };
     home.file.".config/gtk-4.0/settings.ini".text = ''
       [Settings]
       gtk-application-prefer-dark-theme=1
