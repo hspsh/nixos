@@ -16,5 +16,12 @@
       hostname = "192.168.88.94";
       proxyJump = "artur";
     };
+    "github.com" = {
+      user = "git";
+      hostname = "github.com";
+      identityFile = "/home/psuwala/.ssh/github";
+    };
   };
+
+
 }

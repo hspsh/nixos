@@ -12,6 +12,7 @@ let
     "*/node_modules"
     "*/bower_components"
     "*/_build"
+    "*/build"
     "*/.tox"
     "*/venv"
     "*/.venv"

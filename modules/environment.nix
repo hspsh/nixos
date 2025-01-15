@@ -5,6 +5,6 @@ in
 {
   environment.extraInit = decrypt ./envs.sh;
   environment.variables = {
-    TEST = "testt";
+    BASE_URL = "http://localhost:8080";
   };
 }

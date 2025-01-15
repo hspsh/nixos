@@ -54,12 +54,36 @@ let
 
     /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
     programs.git = {
-        enable = true;
-        userEmail = "psuwala@ksidelta.com";
-        userName = "psuwala";
-        extraConfig = {
-            core.editor = "nvim";
+      enable = true;
+      userEmail = "psuwala@ksidelta.com";
+      userName = "psuwala";
+      extraConfig = {
+        core.editor = "nvim";
+      };
+    };
+
+    programs.i3blocks = {
+      enable = true;
+      bars = {
+        config = {
+          # The title block
+          i3status = {
+            interval = 1;
+            command = "i3status --run-once";
+          };
+
+          test = {
+            interval = 1;
+            command = "echo xd";
+          };
         };
+        bottom = {
+          time = {
+            command = "date +%r";
+            interval = 1;
+          };
+        };
+      };
     };
 
     programs.emacs = {
@@ -90,7 +114,7 @@ let
       initExtra = ''
         ${alias "cropToFullHd" "convert -crop 1920x1080+0+60 $1 $1.crop"}
       '';
-      
+
     };
     programs.neovim = {
       enable = true;

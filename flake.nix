@@ -48,5 +48,14 @@
         ./utils/hackerspace.nix
       ];
     };
+    nixosConfigurations.rpi4_kiosk = stable.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        ./utils/pi.nix
+        ./utils/hackerspace.nix
+        ./utils/kiosk.nix
+      ];
+    };
+
   };
 }

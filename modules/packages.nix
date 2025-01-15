@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     lua
+    unixtools.xxd
 
     # user utils
     gnome.eog

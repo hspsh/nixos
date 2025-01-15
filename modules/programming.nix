@@ -87,5 +87,10 @@ in
   users.users.psuwala.extraGroups = [ "docker" ];
   boot.kernel.sysctl."vm.max_map_count" = 1000000;
 
+  boot.kernelParams = [
+    "perf_event_paranoid=1"
+    "kptr_restrict=0"
+  ];
+
   # security.pki.certificateFiles = [ /root/certs ];
 }
