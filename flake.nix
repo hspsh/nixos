@@ -56,6 +56,14 @@
         ./utils/kiosk.nix
       ];
     };
+    nixosConfigurations.kiosk = stable.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./utils/x86-sdimage.nix
+        ./utils/hackerspace.nix
+        ./utils/kiosk.nix
+      ];
+    };
 
   };
 }
