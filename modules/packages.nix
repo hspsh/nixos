@@ -43,6 +43,8 @@
     xorg.xkill
 
     age
+
+    gparted
   ];
 
   xdg.mime.enable = true;
