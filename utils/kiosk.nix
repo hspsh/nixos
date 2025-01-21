@@ -1,12 +1,12 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    chromium
+    firefox
     mpv
   ];
 
   services.cage = {
     enable = true;
-    program = "${pkgs.chromium}/bin/chromium https://hsp.sh";
+    program = "${pkgs.firefox}/bin/firefox https://hsp.sh";
     user = "hsp";
   };
 }
