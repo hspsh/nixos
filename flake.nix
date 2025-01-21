@@ -53,7 +53,7 @@
       modules = [
         ./utils/pi.nix
         ./utils/hackerspace.nix
-        ./utils/kiosk.nix
+        (import ./utils/kiosk.nix "https://hsp.sh")
       ];
     };
     nixosConfigurations.kiosk = stable.lib.nixosSystem {
@@ -61,7 +61,7 @@
       modules = [
         ./utils/x86-iso-image.nix
         ./utils/hackerspace.nix
-        ./utils/kiosk.nix
+        (import ./utils/kiosk.nix (if builtins.getEnv "URL" != "" then builtins.getEnv "URL" else "https://hsp.sh"))
       ];
     };
 
