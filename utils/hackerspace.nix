@@ -10,7 +10,6 @@
       PermitRootLogin = "yes";
     };
   };
-  environment.systemPackages = [ pkgs.neovim ];
   systemd.services.sshd.wantedBy = pkgs.lib.mkForce [ "multi-user.target" ];
     
   users.users.hsp = {
@@ -23,10 +22,13 @@
   users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFGHX76mgcCWWeUFNogAFB4OY632sfBX/ylDG1bKuj/J psuwala@fedora.local" ];
   
   networking.networkmanager.enable = lib.mkForce false; 
-  networking.wireless.enable = true;
+  networking.wireless.enable = lib.mkForce true;
   networking.wireless.networks = {
     eduram = {
       psk = "zarazcipodam";
     };
   };
+
+
+  environment.systemPackages = [ pkgs.neovim pkgs.networkmanager ];
 }

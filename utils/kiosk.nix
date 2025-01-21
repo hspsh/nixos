@@ -6,6 +6,7 @@
 
   services.cage = {
     enable = true;
-    program = "${pkgs.chromium} https://hsp.sh";
+    program = "${pkgs.chromium}/bin/chromium https://hsp.sh";
+    user = "hsp";
   };
 }
